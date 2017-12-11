@@ -7,6 +7,7 @@ defmodule ElixirLab.Mixfile do
       version: "0.1.0",
       elixir: "~> 1.5",
       start_permanent: Mix.env == :prod,
+      escript: [main_module: ElixirLab],
       deps: deps()
     ]
   end
@@ -25,6 +26,8 @@ defmodule ElixirLab.Mixfile do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"},
       {:gun, git: "https://github.com/ninenines/gun.git", ref: "dd1bfe4d6f9fb277781d922aa8bbb5648b3e6756", override: true},
       {:nostrum, git: "https://github.com/Kraigie/nostrum.git"},
+      {:crawler, "~> 1.0", override: true},
+      {:floki, "~> 0.19.0"},
     ]
   end
 end
